@@ -15,7 +15,7 @@ public class AdoptionDatabaseAdapter implements AdoptionDatabase {
     @Override
     public boolean alreadyAdopted(Long petId) {
         var adoption = adoptionRepository.findById(petId);
-        return adoption.map(Adoption::isIsAlreadyAdopted).orElse(false);
+        return adoption.map(Adoption::isAlreadyAdopted).orElse(false);
 
     }
 
