@@ -1,15 +1,13 @@
-package org.shelter.adpitionservice.infra;
+package org.shelter.adoptionservice.infra;
 
 import lombok.RequiredArgsConstructor;
-import org.shelter.adpitionservice.infra.entity.Adoption;
-import org.shelter.adpitionservice.core.ports.outgoing.AdoptionDatabase;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.shelter.adoptionservice.infra.entity.Adoption;
+import org.shelter.adoptionservice.core.ports.outgoing.AdoptionDatabase;
 import org.springframework.stereotype.Repository;
 
 @Repository
 @RequiredArgsConstructor
 public class AdoptionDatabaseAdapter implements AdoptionDatabase {
-
     private final AdoptionRepository adoptionRepository;
 
     @Override
@@ -22,9 +20,5 @@ public class AdoptionDatabaseAdapter implements AdoptionDatabase {
     @Override
     public void adopt(Adoption adoption) {
         adoptionRepository.save(adoption);
-    }
-
-    private interface AdoptionRepository extends JpaRepository<Adoption, Long> {
-
     }
 }

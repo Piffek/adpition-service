@@ -1,4 +1,4 @@
-package org.shelter.adpitionservice.core.model;
+package org.shelter.adoptionservice.core.model;
 
 public record AdoptPetRequest(Long petId, String userEmail) {
 }

@@ -1,4 +1,4 @@
-package org.shelter.adpitionservice.core.ports.outgoing;
+package org.shelter.adoptionservice.core.ports.outgoing;
 
 import java.util.List;
 

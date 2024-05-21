@@ -1,4 +1,4 @@
-package org.shelter.adpitionservice.infra.entity;
+package org.shelter.adoptionservice.infra.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

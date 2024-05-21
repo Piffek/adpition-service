@@ -1,6 +1,6 @@
-package org.shelter.adpitionservice.core.ports.outgoing;
+package org.shelter.adoptionservice.core.ports.outgoing;
 
-import org.shelter.adpitionservice.infra.entity.Adoption;
+import org.shelter.adoptionservice.infra.entity.Adoption;
 
 public interface AdoptionDatabase {
     boolean alreadyAdopted(Long petId);
