@@ -12,13 +12,13 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/pet/adopt")
+@RequestMapping("/api/adoption/")
 @RequiredArgsConstructor
 public class AdoptPetController {
 
     private final AdoptPet adoptPet;
 
-    @PostMapping("/")
+    @PostMapping("/adopt")
     @ResponseStatus(HttpStatus.OK)
     private boolean adopt(@RequestBody AdoptPetRequest adoptPetRequest) {
         return adoptPet.processing(new AdoptionCommand(adoptPetRequest.petId(), adoptPetRequest.userEmail()));
